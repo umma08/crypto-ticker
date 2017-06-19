@@ -1,24 +1,25 @@
 # crypto-ticker
 
-This is a crypto-ticker for the omega-onion
+This is a crypto-ticker for the OmegaOnion
 
-There are some files and explanation to follow. 
+There are some files and explanations to follow in more detail, with respect to setting up the OmegaOnion. 
 
-This program allow the omega to utilise the coinmarket cap API. At the moment it displays four cryptocurrnecies, their ticker, current EUR price, and the % change for the last 24 hours. 
+The program allow the Omega to utilise the Coinmarket Cap API. At the moment it displays four cryptocurrnecies, their ticker symbol, current EUR price, and the % change for the last 24 hours. 
 
-Updates to follow
+## /etc/crontabs
 
-### Some updates here
+The following line this must be added to /etc/crontabs. 
 
-### this must be added to etc/crontabs. It runs the script every three minutes (every minute that is divisible by three)
+It runs the script every three minutes (every minute that is divisible by three)
 
 */3 * * * * python /root/btc-flash/btcFlash.py
-#
 
-### this must be added to the /etc/rc.local It loads the program on startup. Remember that the correct permissions must be given to the script. This command is below
+Ensure that a # follows the command on the line below in the crontabs file. 
+Otherwise it will not run
 
-# Put your custom commands here that should be executed once
-# the system init finished. By default this file does nothing.
+## /etc/rc.local 
+
+The following commands must be placed in this file. It loads the program on startup. 
 
 python /root/btc-flash/oled-start.py
 
@@ -28,8 +29,11 @@ python /root/btc-flash/btcFlash.py
 
 exit 0
 
+Remember that the correct permissions must be given to the script. 
 
-### this is the command to give the correct permissions to the script once it is placed in the root folder. 
+These commands are seen below this section
+
+## Setting correct permissions
 
 chmod +x /root/btc-flash/oled-start.py
 
