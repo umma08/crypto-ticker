@@ -33,7 +33,7 @@ Remember that the correct permissions must be given to the script.
 
 These commands are seen below this section
 
-## Setting correct permissions
+## setting correct permissions
 
 chmod +x /root/btc-flash/oled-start.py
 
