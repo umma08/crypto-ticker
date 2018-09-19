@@ -4,7 +4,7 @@ This is a crypto-ticker for the OmegaOnion
 
 There are some files and explanations to follow in more detail, with respect to setting up the OmegaOnion. 
 
-The program allow the Omega to utilise the Coinmarket Cap API. At the moment it displays four cryptocurrnecies, their ticker symbol, current EUR price, and the % change for the last 24 hours. 
+The program allows the Omega to utilise the Coinmarket Cap API. At the moment it displays four cryptocurrnecies, their ticker symbol, current EUR price, and the % change for the last 24 hours. 
 
 ## /etc/crontabs
 
